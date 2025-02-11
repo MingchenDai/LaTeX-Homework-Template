@@ -1,0 +1,60 @@
+\documentclass{article}
+\input{style.tex}
+\input{config.tex}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\section{\TeX 模板说明}
+本模板是一个\LaTeX 作业模板，包含\code{template.tex}、\code{config.tex}和\code{style.tex}三个文件。在\code{config.tex}中您可以修改文档的相关信息。
+
+全局字体和公式字体已更换为Times New Roman。全文段落可以自动缩进，请不要使用\code{\\\\}（强制换行符号）而是使用自然换行（在\TeX 源文件的两个段落之间空一行），否则自动缩进将会失效。
+
+请使用pdf\LaTeX 编译。生成标签和交叉引用需要编译两次，如果底部页码出现错误，请再次编译。
+\subsection{列表功能测试}
+这是正常的正文文本。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。
+\begin{itemlist}
+    \item 这是无序列表项目1。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。
+    \item 这是无序列表项目2。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。
+\end{itemlist}
+
+这是正常的正文文本。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。
+
+This is a formal paragraph.
+\begin{numlist}
+    \item 这是有序列表项目1。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。
+    \item 这是有序列表项目2。在该\code{itemize}环境中，导入了\code{enumitem}宏包并将\code{itemsep}修改为0pt，\code{topsep}修改为0pt，\code{parsep}修改为0pt，\code{leftmargin}修改为2em。
+\end{numlist}
+\subsection{Question和Answer环境测试}
+\begin{Question}
+    
+This is a test paragraph with automatical indent.
+
+This is another test paragraph with automatical indent.
+
+\end{Question}
+\begin{Answer}
+    This is a test paragraph with automatical indent.
+    
+    This is another test paragraph with automatical indent.
+\end{Answer}
+\subsection{代码环境测试}
+行内代码可以使用\code{\\code{}}表示。
+
+以下是一个代码块示例：
+\begin{lstlisting}[language=C++]
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main(){
+        cout<<"Welcome to LaTeX!"<<endl;
+        return 0;
+    }
+\end{lstlisting}
+\subsection{公式测试}
+这是一个\code{align}环境中的行间公式。
+\begin{align}
+    \int_a^bf(x)\mathrm{d}x=F(b)-F(a)
+\end{align}
+
+这是一个行内公式：$\sum_{k=1}^{10}k$。
+\end{document}
