@@ -19,3 +19,5 @@
 *.log
 *.fdb_latexmk
 *.pdf
+
+!./vi
