@@ -1,5 +1,13 @@
-\documentclass{mdocs}
-\title{123}
+\documentclass[article-en]{mdocs}
+\input{config.tex}
+\newcommand{\filetitle}{Name}
+\newcommand{\filesubtitle}{For Instance A Subtitle}
+\newcommand{\fileeditdate}{1999/10/32}
+%%% Fill Those Options For Homework Style %%%
+\newcommand{\coursename}{Introduction to \LaTeX}
+\newcommand{\coursecode}{LTX1323}
+\usepackage{lipsum}
+
 \begin{document}
 \maketitle
 123
@@ -7,5 +15,50 @@ $\bm{qwe}yz$
 \begin{align}
     y=x^2
 \end{align}
+
 \code{123LaTeX}
+\lipsum[1-8]
+\section{TEST}
+\lipsum[1-8]
+\subsection{List Environment Test}
+\lipsum[1]
+\begin{itemlist}
+    \item \lipsum[1]
+    \item \lipsum[1]
+    \item \lipsum[1]
+\end{itemlist}
+
+\lipsum[1]
+\begin{numlist}
+    \item \lipsum[1]
+    \item \lipsum[1]
+    \item \lipsum[1]
+\end{numlist}
+\subsection{Table Test}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lll}
+        \toprule
+        Table Header & Table Header & Table Header\\
+        \midrule
+        Table Item & Table Item & Table Item\\
+        Table Item & Table Item & Table Item\\
+        Table Item & Table Item & Table Item\\
+        \bottomrule
+    \end{tabular}
+    \caption{Table Test}
+\end{table}
+\subsection{Code Test}
+Inline code style test:
+
+\code{include<iostream>}
+
+Code block style test:
+\begin{lstlisting}[language=Python]
+    def latex_function():
+        exit()
+    
+    if __main__:
+        latex_function()
+\end{lstlisting}
 \end{document}
