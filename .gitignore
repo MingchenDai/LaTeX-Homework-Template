@@ -18,6 +18,4 @@
 *.fls
 *.log
 *.fdb_latexmk
-*.pdf
-
-!./vi
+*.synctex.gz

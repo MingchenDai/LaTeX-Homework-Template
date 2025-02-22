@@ -1,14 +1,15 @@
-\documentclass[cn,none,homework]{mdocs}
-\newcommand{\filetitle}{Name}
+\documentclass[en,blue,homework]{mdocs}
+\newcommand{\filetitle}{Assignment 3.2}
 \newcommand{\filesubtitle}{For Instance A Subtitle}
 \newcommand{\fileeditdate}{1999/10/32}
-\newcommand{\fileauthor}{Author}
+\newcommand{\fileauthor}{}
 \newcommand{\fileauthoracademy}{Academy}
 \newcommand{\fileauthorclass}{Class}
 \newcommand{\fileauthorserial}{54749110}
 %%% Fill Those Options For Homework Style %%%
-\newcommand{\coursename}{Introduction to \LaTeX}
-\newcommand{\coursecode}{LTX1323}
+\newcommand{\coursename}{Introduction to the Art of \LaTeX}
+\newcommand{\coursecode}{LTX132}
+\coursecode{LTX123}
 \usepackage{lipsum}
 
 \begin{document}
@@ -58,12 +59,21 @@ Inline code style test:
 \code{include<iostream>}
 
 Code block style test:
-\begin{lstlisting}[language=Python]
-    def latex_function():
-        exit()
-    
-    if __main__:
-        latex_function()
+\begin{lstlisting}[language=C]
+    #include<bits/stdc++.h>
+    using namespace std;
+    int main{
+        cout<<"Welcome to the world of LaTeX!"<<endl;
+        return 0;
+    }
 \end{lstlisting}
 123
+\begin{lstlisting}[language=Python]
+    def function():
+        a=5
+        print("Welcome to the world of LaTeX!")
+
+    if __MAIN__:
+        function()
+\end{lstlisting}
 \end{document}
