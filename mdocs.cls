@@ -4,27 +4,32 @@
 
 %%% Set Options %%%
 \newcommand{\lang}{cn}
-\newcommand{\sjtu}{none}
-\newcommand{\type}{article}
-\newcommand{\watermark}{watermark}
 \DeclareOption{en}{\renewcommand{\lang}{en}}
 \DeclareOption{cn}{\renewcommand{\lang}{cn}}
-\DeclareOption{thesis}{\renewcommand{\type}{thesis}}
-\DeclareOption{article}{\renewcommand{\type}{article}}
-\DeclareOption{homework}{\renewcommand{\type}{homework}}
-\DeclareOption{beamer}{\renewcommand{\type}{beamer}}
+\newcommand{\sjtu}{none}
 \DeclareOption{none}{\renewcommand{\sjtu}{none}}
 \DeclareOption{blue}{\renewcommand{\sjtu}{blue}}
 \DeclareOption{red}{\renewcommand{\sjtu}{red}}
+\newcommand{\type}{article}
+\DeclareOption{thesis}{\renewcommand{\type}{thesis}}
+\DeclareOption{article}{\renewcommand{\type}{article}}
+\DeclareOption{homework}{\renewcommand{\type}{homework}}
+% Unimplemeted % \DeclareOption{beamer}{\renewcommand{\type}{beamer}}
+\newcommand{\watermark}{no-watermark}
 \DeclareOption{no-watermark}{\renewcommand{\watermark}{no-watermark}}
 \DeclareOption{watermark}{\renewcommand{\watermark}{watermark}}
 \ProcessOptions
 
-%%% Fonts and Paragraphs%%%
+%%% Fonts and Paragraphs %%%
 \RequirePackage{xifthen}
 \RequirePackage{xparse}
 \ifthenelse{\equal{\lang}{cn}}{
-    \RequirePackage[UTF8]{ctex}
+    \RequirePackage[slantfont, boldfont]{xeCJK}
+    \RequirePackage{tocbibind}
+    \renewcommand{\contentsname}{目录}
+    \renewcommand{\listfigurename}{图片列表}
+    \renewcommand{\listtablename}{表格列表}
+    % Deprecated due to format % \RequirePackage{ctex}
 }{}
 \RequirePackage{fontspec}
 \RequirePackage[T1]{fontenc}
